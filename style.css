@@ -1,0 +1,147 @@
+:root {
+  margin: 20px ;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+}
+body {
+  height: 200vh;
+}
+.todo-app {
+  width: 100%;
+  max-width: 90%;
+  border-radius: 10px;
+}
+.outerbox {
+  background-color: rgba(255, 255, 255, 0.836);
+  border: 2px solid rgb(173, 173, 59);
+  border-radius: 10px;
+  height: auto;
+  min-height: 50vh;
+  margin: 0 30% 0 30%;
+  display: flex;
+  justify-content: center;
+}
+.innerbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  width: 80%;
+  height: 35px;
+  padding: 0 0 0 20px;
+  font-size: 1.2rem;
+}
+button,
+input {
+  border-radius: 10px;
+}
+input::placeholder {
+  text-align: center;
+}
+input:active {
+  box-shadow: 0 0 10px white;
+}
+
+button {
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 0 0px 0 20px;
+  height: 34px;
+  width: 60px;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+h2 {
+  
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+}
+ul {
+  margin: 10px 0;
+  padding-inline-start: 0px;
+}
+ul li {
+  list-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 8px 12px 50px;
+  cursor: pointer;
+  position: relative;
+  color: #1a1a1a;
+  transition: 0.2s;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(Black-Square-Shape.png);
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  left: 8px;
+  top: 12px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(Check-Transparent-Images-PNG.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover {
+  background: #edeef0;
+}
+ul li:hover {
+  border-radius: 10px;
+  scale: 1.02;
+  box-shadow: 0 0 10px black;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ddddbd;
+  }
+  button {
+    background-color: #5d87e2;
+  }
+}
+@media screen and (max-width: 600px) {
+  .outerbox {
+  
+    width: 100%;
+    min-height: 50vh;
+    margin:0px;
+  
+  }
+}
